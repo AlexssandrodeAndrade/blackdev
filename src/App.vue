@@ -1,7 +1,8 @@
 <template>
-  <Binding />
+  <Form />
+
 </template>
 
 <script setup>
-import Binding from './components/Binding/Binding.vue'
+import Form from './components/Form/Form.vue';
 </script>
