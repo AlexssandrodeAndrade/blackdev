@@ -1,20 +1,19 @@
 <template>
-<h1>OptionsApi</h1>
+  <h1>OptionsApi</h1>
 
-<p>O contador esta no número: {{ counter }}</p>
+  <p>O contador esta no número: {{ counter }}</p>
 
-<button @click="counter++">Somar</button>
+  <button @click="counter++">Somar</button>
 </template>
 
 <script>
 export default {
-
-  data(){
-    return{
-      counter: 0
+  data() {
+    return {
+      counter: 0,
     }
   },
-  beforeCreate(){
+  beforeCreate() {
     console.log('1 Options API - Before Created')
   },
   created() {
@@ -26,10 +25,10 @@ export default {
   mounted() {
     console.log('4 Options API - Mounted')
   },
-  beforeUpdate(){
+  beforeUpdate() {
     console.log('5 Options API - Before Update')
   },
-  updated(){
+  updated() {
     console.log('6 Options API - updated')
   },
   beforeUnmount() {
@@ -37,6 +36,6 @@ export default {
   },
   unmounted() {
     console.log('8 Options API - Unmounted')
-  }
+  },
 }
 </script>

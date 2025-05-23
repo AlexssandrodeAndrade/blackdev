@@ -1,8 +1,7 @@
 <template>
-  <Form />
-
+  <VFor />
 </template>
 
 <script setup>
-import Form from './components/Form/Form.vue';
+import VFor from './components/Directives/VFor.vue'
 </script>

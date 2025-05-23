@@ -28,6 +28,6 @@ watch(
     setTimeout(() => {
       status.value = 'Aceito!'
     }, 3000)
-  },
+  }
 )
 </script>

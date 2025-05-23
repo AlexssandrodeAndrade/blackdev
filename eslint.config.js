@@ -1,28 +1,23 @@
-import { defineConfig, globalIgnores } from 'eslint/config'
-import globals from 'globals'
 import js from '@eslint/js'
 import pluginVue from 'eslint-plugin-vue'
-import pluginOxlint from 'eslint-plugin-oxlint'
-import skipFormatting from '@vue/eslint-config-prettier/skip-formatting'
+import prettier from '@vue/eslint-config-prettier'
+import { defineConfig } from 'eslint/config'
 
 export default defineConfig([
   {
-    name: 'app/files-to-lint',
-    files: ['**/*.{js,mjs,jsx,vue}'],
-  },
-
-  globalIgnores(['**/dist/**', '**/dist-ssr/**', '**/coverage/**']),
-
-  {
-    languageOptions: {
-      globals: {
-        ...globals.browser,
-      },
+    env: {
+      browser: true,
+      es2021: true,
+      node: true,
+    },
+    rules: {
+      'no-console': 'off', // permite console sem aviso
+      'vue/multi-word-component-names': 'off', // permite nomes simples
+      'no-unused-vars': 'off', // não reclama de variáveis não usadas
+      'no-undef': 'off', // desliga o erro de variáveis não definidas
     },
   },
-
   js.configs.recommended,
-  ...pluginVue.configs['flat/essential'],
-  ...pluginOxlint.configs['flat/recommended'],
-  skipFormatting,
+  pluginVue.configs['flat/essential'],
+  prettier,
 ])

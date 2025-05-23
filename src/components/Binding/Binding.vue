@@ -1,7 +1,12 @@
 <template>
   <h1>Bindings</h1>
 
-  <input :type="input.type" :id="input.id" :name="input.nomeUser" :placeholder="input.placeholder" />
+  <input
+    :type="input.type"
+    :id="input.id"
+    :name="input.nomeUser"
+    :placeholder="input.placeholder"
+  />
   <button @click.prevent="showHidePassword">Mostrar/Ocutar Senha</button>
 </template>
 <script setup>
