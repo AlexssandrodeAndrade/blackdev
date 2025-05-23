@@ -1,7 +1,11 @@
 <template>
-  <VFor />
+  <CompositionCard
+  title="Meu Tirulo"
+  body="Corpo do meu card!"
+  :access="123"
+  :status="true"
+  />
 </template>
-
 <script setup>
-import VFor from './components/Directives/VFor.vue'
+import CompositionCard from './components/Props/CompositionCard.vue';
 </script>
