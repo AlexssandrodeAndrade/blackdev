@@ -1,11 +1,16 @@
 <template>
-  <CompositionCard
-  title="Meu Tirulo"
-  body="Corpo do meu card!"
-  :access="123"
-  :status="true"
-  />
+ <h1>Transition</h1>
+
+<button @click="toggle = !toggle">Toggle</button>
+
+<div v-if="toggle">
+  <TransitionComponent />
+</div>
 </template>
 <script setup>
-import CompositionCard from './components/Props/CompositionCard.vue';
+import TransitionComponent from './components/Transition/TransitionComponent.vue'
+import {ref} from 'vue'
+
+const toggle = ref(true)
+
 </script>
