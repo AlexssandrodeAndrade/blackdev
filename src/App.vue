@@ -1,11 +1,7 @@
 <template>
-  <CompositionCard
-  title="Meu Tirulo"
-  body="Corpo do meu card!"
-  :access="123"
-  :status="true"
-  />
+  <p>Saída do comando Date: {{ new Date() }}</p>
+  <p>Data formatada: {{ useToDateFormat(new Date()) }}</p>
 </template>
 <script setup>
-import CompositionCard from './components/Props/CompositionCard.vue';
+import { useToDateFormat } from './components/Composable/useToDateFormat'
 </script>
